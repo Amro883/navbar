@@ -1,0 +1,171 @@
+* {
+    transition: 1s ease;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(rgb(133, 126, 126), white);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav.active {
+    width: 400px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 3px black;
+    padding: 3px;
+    position: relative;
+    right: 100px;
+}
+
+nav {
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px 3px black;
+    position: relative;
+    right: 100px;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+nav.active ul li {
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    font-size: 16px;
+    transform: rotate(0deg);
+    transform: translate(0);
+    opacity: 1;
+    transform: translate(0px);
+}
+
+nav ul li {
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+    transform: translate(200px) rotateY(90deg);
+}
+
+
+nav.active .icon {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    transform: translateX(0%);
+    transform: rotate(0deg);
+    position: relative;
+    left: 20px;
+}
+
+nav .icon {
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    transform: translateX(-160px);
+    transition: .5s ease;
+
+}
+
+
+nav.active .icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: green;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    transform: rotate(-720deg);
+    transition: .6s ease;
+
+}
+
+nav .icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: green;
+    position: relative;
+    transform: rotate(0deg);
+    top: 10px;
+
+
+}
+
+
+nav.active .icon .line2 {
+    transform: rotate(-765deg);
+    margin-top: 0px;
+
+}
+
+nav .icon .line2 {
+    transform: rotate(0deg);
+    margin-top: 4px;
+
+}
+
+
+nav.active .icon .line1 {
+    transform: rotate(-675deg);
+
+}
+
+nav .icon .line1 {
+    transform: rotate(0deg);
+
+}
+
+@media (max-width:480px) {
+    body {
+        height: 50vh;
+    }
+
+
+    nav {
+        right: 0px;
+    }
+
+    nav.active {
+        position: relative;
+        right: 10px;
+        width: 320px;
+        justify-content: flex-end;
+        padding: 0px;
+
+    }
+
+
+    nav.active ul {
+        justify-content: flex-start;
+        margin-right: 30px;
+    }
+
+    nav.active .icon {
+        position: absolute;
+        left: 90%;
+    }
+}
